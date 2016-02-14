@@ -1,20 +1,17 @@
-##Getting and Cleaning Data Project
+# Getting and Cleaning Data - Course Project
 
+This is the course project for the Getting and Cleaning Data Coursera course.
+The R script, `run_analysis.R`, does the following:
 
-Repo for the submission of the course project for the Johns Hopkins Getting and Cleaning Data course.
+1. Download the dataset if it does not already exist in the working directory
+2. Load the activity and feature info
+3. Loads both the training and test datasets, keeping only those columns which
+   reflect a mean or standard deviation
+4. Loads the activity and subject data for each dataset, and merges those
+   columns with the dataset
+5. Merges the two datasets
+6. Converts the `activity` and `subject` columns into factors
+7. Creates a tidy dataset that consists of the average (mean) value of each
+   variable for each subject and activity pair.
 
-##Overview
-
-This project serves to demonstrate the collection and cleaning of a tidy data set that can be used for subsequent analysis. A full description of the data used in this project can be found at The UCI Machine Learning Repository
-
-The source data for this project can be found here.
-
-Making Modifications to This Script
-
-Once you have obtained and unzipped the source files, you will need to make one modification to the R file before you can process the data. Note that on line 26 of run_analysis.R, you will set the path of the working directory to relect the location of the source files in your own directory.
-
-##Project Summary
-
-The following is a summary description of the project instructions
-
-You should create one R script called run_analysis.R that does the following. 1. Merges the training and the test sets to create one data set. 2. Extracts only the measurements on the mean and standard deviation for each measurement. 3. Uses descriptive activity names to name the activities in the data set 4. Appropriately labels the data set with descriptive activity names. 5. Creates a second, independent tidy data set with the average of each variable for each activity and each subject.
+The end result is shown in the file `tidy.txt`.
